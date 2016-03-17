@@ -58,13 +58,4 @@ public class About extends JDialog{
 		
 	}
 
-	public MainFrame getMainFrame() {
-		return mainFrame;
-	}
-
-	public void setMainFrame(MainFrame mainFrame) {
-		this.mainFrame = mainFrame;
-	}
-
-
 }
