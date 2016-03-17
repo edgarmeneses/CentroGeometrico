@@ -48,11 +48,14 @@ public class MainFrame extends JFrame implements ChangeListener {
 	private JLabel lblImgencargarImagen;
 	private JLabel lblCargarImagen;
 	private JLabel lblSalir1;
+	private About about;
+	private MainFrame mainFrame;
 
 
 	public MainFrame() throws HeadlessException {
 		init();
 		setVisible(true);
+		mainFrame = this;
 	}
 
 	private void init(){
@@ -174,7 +177,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				// TODO Auto-generated method stub
-
+				lblImgencargarImagen.setToolTipText("Cargar imagen");
 			}
 
 			@Override
@@ -213,6 +216,35 @@ public class MainFrame extends JFrame implements ChangeListener {
 		getContentPane().add(lblImgAcerca);
 		ImageIcon icon1 = new ImageIcon(this.getClass().getResource("../img/acercade.png"));
 		lblImgAcerca.setIcon(icon1);
+		lblImgAcerca.addMouseListener(new MouseListener() {
+
+			public void mouseReleased(MouseEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void mousePressed(MouseEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void mouseExited(MouseEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void mouseEntered(MouseEvent e) {
+				// TODO Auto-generated method stub
+				lblImgAcerca.setToolTipText("Acerca de");
+			}
+
+			public void mouseClicked(MouseEvent e) {
+				// TODO Auto-generated method stub
+				about = new About(mainFrame);
+				about.setVisible(true);
+			}
+		});
+
 
 		lblGenarar = new JLabel("Ejecutar");
 		lblGenarar.setBounds(821, 97, 60, 14);
@@ -246,7 +278,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				// TODO Auto-generated method stub
-				
+				lblImgGenerar.setToolTipText("Ejecutar");
 			}
 			
 			@Override
@@ -290,7 +322,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 			@Override
 			public void mouseEntered(MouseEvent arg0) {
 				// TODO Auto-generated method stub
-
+				lblImgSalir.setToolTipText("Salir");
 			}
 
 			@Override
