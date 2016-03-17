@@ -98,20 +98,23 @@ public class MainFrame extends JFrame implements ChangeListener {
 
 		JLabel lbl_ancho = new JLabel("Ancho:");
 		lbl_ancho.setBounds(209,558,80,30);
+		lbl_ancho.setVisible(false);
 		getContentPane().add(lbl_ancho);
 
-		ancho = new JTextField("1");
+		ancho = new JTextField("100");
 		ancho.setBounds(289,558,100,30);
-		//ancho.setVisible(false);
+		ancho.setVisible(false);
 		getContentPane().add(ancho);
 
 		JLabel lbl_expermientos = new JLabel("Experimentos:");
 		lbl_expermientos.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lbl_expermientos.setBounds(540,68,100,30);
+		lbl_expermientos.setVisible(false);
 		getContentPane().add(lbl_expermientos);
 
-		experimentos = new JTextField();
+		experimentos = new JTextField("1");
 		experimentos.setBounds(651,70,100,30);
+		experimentos.setVisible(false);
 		getContentPane().add(experimentos);
 
 		lblResultadoCentroMedio = new JLabel("Resultado Centro Medio");
@@ -328,19 +331,19 @@ public class MainFrame extends JFrame implements ChangeListener {
 		image.clear();
 		int exp = Integer.parseInt(experimentos.getText());
 		int cant_puntos = Integer.parseInt(puntos.getText());
-		double area_acum=0;
-		for (int e = 0; e < exp; e++) {
-			int acum = 0;
-			for (int i = 0; i < cant_puntos; i++) {
-				if(image.randomPoint()){
-					acum++;
-				}
-			}
-			area_acum+=(double)acum/(double)cant_puntos;
-
-		}
-
-		area_acum = area_acum/cant_puntos;
+		double area_acum=image.randomPoint(exp, cant_puntos);
+//		for (int e = 0; e < exp; e++) {
+//			int acum = 0;
+//			for (int i = 0; i < cant_puntos; i++) {
+//				if(image.randomPoint()){
+//					acum++;
+//				}
+//			}
+//			area_acum+=(double)acum/(double)cant_puntos;
+//
+//		}
+//
+//		area_acum = area_acum/cant_puntos;
 		System.out.println(image.getImage().getWidth()+"ancho") ;
 		double ancho_img = Double.parseDouble(ancho.getText());
 		double alto_img = (ancho_img * (double)image.getImage().getWidth()) /  (double)image.getImage().getHeight();
@@ -368,7 +371,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		int x = image.getCoordinateX();
 		int y =image.getCoordinateY();
 		//image.center(x,y );
-		System.out.println("x= "+ x+" y= "+y);
+		//System.out.println("x= "+ x+" y= "+y);
 
 		filter.removeAll();
 
@@ -377,7 +380,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		//image.center(x,y );
 		//System.out.println("x= "+ x+" y= "+y);
 		filter.repaint();
-		filter.add(label);
+		//filter.add(label);
 		filter.add(lbl_filter);
 		filter.repaint();
 		repaint();

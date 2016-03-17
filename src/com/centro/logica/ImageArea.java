@@ -48,6 +48,24 @@ public class ImageArea {
         }
     }
     
+    public double randomPoint(int experimentos, int cant_puntos){
+    	double area_acum=0;
+		for (int e = 0; e < experimentos; e++) {
+			int acum = 0;
+			for (int i = 0; i < cant_puntos; i++) {
+				if(randomPoint()){
+					acum++;
+				}
+			}
+			area_acum+=(double)acum/(double)cant_puntos;
+
+		}
+
+		area_acum = area_acum/cant_puntos;
+		 center(getCoordinateX(), getCoordinateY());
+		return area_acum;
+    }
+    
     public boolean randomPoint(){
         int x = (int)(Math.random() * (double) imageResult.getWidth());
         int y = (int)(Math.random() * (double) imageResult.getHeight());
@@ -79,11 +97,9 @@ public class ImageArea {
     }
     
     public void center(int x, int y){
-    	System.out.println(x+","+y);
-	//int [] rgb = {Color.MAGENTA.getRGB()};
-    	for (int i = x-100; i < x+100; i++) {
-			for (int j = y-100; j < y+100; j++) {
-				imageResult.setRGB(x, y, Color.magenta.getRGB());
+    	for (int i = x-5; i < x+5; i++) {
+			for (int j = y-5; j < y+5; j++) {
+				imageResult.setRGB(i, j, Color.magenta.getRGB());
 			}
 		}
     	 
