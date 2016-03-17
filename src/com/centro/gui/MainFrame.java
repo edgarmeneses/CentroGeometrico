@@ -67,12 +67,14 @@ public class MainFrame extends JFrame implements ChangeListener {
 
 		JLabel lbl_tolerancia = new JLabel("Tolerancia:");
 		lbl_tolerancia.setBounds(10,558,100,30);
+		lbl_tolerancia.setVisible(false);
 		getContentPane().add(lbl_tolerancia);
 
 		tolerancia = new JSpinner();
 		tolerancia.addChangeListener(this);
 		tolerancia.setBounds(99, 558, 100, 30);
 		tolerancia.setValue(75);
+		tolerancia.setVisible(false);
 		getContentPane().add(tolerancia);
 
 		filter = new JPanel(null);
@@ -98,8 +100,9 @@ public class MainFrame extends JFrame implements ChangeListener {
 		lbl_ancho.setBounds(209,558,80,30);
 		getContentPane().add(lbl_ancho);
 
-		ancho = new JTextField();
+		ancho = new JTextField("1");
 		ancho.setBounds(289,558,100,30);
+		//ancho.setVisible(false);
 		getContentPane().add(ancho);
 
 		JLabel lbl_expermientos = new JLabel("Experimentos:");
@@ -338,7 +341,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		}
 
 		area_acum = area_acum/cant_puntos;
-
+		System.out.println(image.getImage().getWidth()+"ancho") ;
 		double ancho_img = Double.parseDouble(ancho.getText());
 		double alto_img = (ancho_img * (double)image.getImage().getWidth()) /  (double)image.getImage().getHeight();
 
