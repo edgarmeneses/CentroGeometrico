@@ -335,18 +335,6 @@ public class MainFrame extends JFrame implements ChangeListener {
 		double area_acum=image.randomPoint(exp, cant_puntos);
 		lblResultadoX.setText(image.getCoordinateX()+"");
 		lblResultadoY.setText(image.getCoordinateY()+"");
-//		for (int e = 0; e < exp; e++) {
-//			int acum = 0;
-//			for (int i = 0; i < cant_puntos; i++) {
-//				if(image.randomPoint()){
-//					acum++;
-//				}
-//			}
-//			area_acum+=(double)acum/(double)cant_puntos;
-//
-//		}
-//
-//		area_acum = area_acum/cant_puntos;
 		System.out.println(image.getImage().getWidth()+"ancho") ;
 		double ancho_img = Double.parseDouble(ancho.getText());
 		double alto_img = (ancho_img * (double)image.getImage().getWidth()) /  (double)image.getImage().getHeight();
