@@ -41,7 +41,7 @@ public class About extends JDialog{
 	 */
 	public void init( ){
 		
-		this.setSize(1000, 510);
+		this.setSize(650, 385);
 		this.setTitle(TITLE);
 		this.setLayout(new BorderLayout());
 		this.setResizable(false);
@@ -49,8 +49,8 @@ public class About extends JDialog{
 		this.getContentPane().setBackground(Color.white);	
 		
 		this.jLabelImage = new JLabel();
-		this.jLabelImage.setSize(1000, 500);
-		this.jLabelImage.setIcon(new ImageIcon(getClass().getResource("../img/about.png")));
+		this.jLabelImage.setSize(650, 380);
+		this.jLabelImage.setIcon(new ImageIcon(getClass().getResource("../img/about2.png")));
 		this.add(jLabelImage, BorderLayout.CENTER);	
 		
 		JPanel jPanel= new JPanel();
