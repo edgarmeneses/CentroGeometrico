@@ -91,7 +91,6 @@ public class ImageArea {
                 imageResult.setRGB(x, y-1, Color.BLUE.getRGB());
             }
         }
-       
         //center(getCoordinateX(), getCoordinateY());
         return intersects;
     }

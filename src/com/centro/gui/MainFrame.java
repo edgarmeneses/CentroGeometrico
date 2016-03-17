@@ -86,6 +86,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		result=new JLabel("Resultado:");
 		result.setBounds(540, 279, 418, 30);
 		getContentPane().add(result);
+		result.setVisible(false);
 
 		JLabel lbl_puntos = new JLabel("Puntos:");
 		lbl_puntos.setFont(new Font("Tahoma", Font.BOLD, 14));
@@ -128,7 +129,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		lblX.setBounds(540, 248, 46, 14);
 		getContentPane().add(lblX);
 
-		lblResultadoX = new JLabel("Resultado x");
+		lblResultadoX = new JLabel();
 		lblResultadoX.setBounds(566, 247, 127, 21);
 		getContentPane().add(lblResultadoX);
 
@@ -137,7 +138,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		lblY.setBounds(750, 248, 46, 14);
 		getContentPane().add(lblY);
 
-		lblResultadoY = new JLabel("Resultado y");
+		lblResultadoY = new JLabel();
 		lblResultadoY.setBounds(782, 247, 127, 21);
 		getContentPane().add(lblResultadoY);
 
@@ -332,6 +333,8 @@ public class MainFrame extends JFrame implements ChangeListener {
 		int exp = Integer.parseInt(experimentos.getText());
 		int cant_puntos = Integer.parseInt(puntos.getText());
 		double area_acum=image.randomPoint(exp, cant_puntos);
+		lblResultadoX.setText(image.getCoordinateX()+"");
+		lblResultadoY.setText(image.getCoordinateY()+"");
 //		for (int e = 0; e < exp; e++) {
 //			int acum = 0;
 //			for (int i = 0; i < cant_puntos; i++) {
