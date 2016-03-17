@@ -47,7 +47,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 	private JLabel lblSalir;
 	private JLabel lblImgencargarImagen;
 	private JLabel lblCargarImagen;
-	private JLabel lblSalir_1;
+	private JLabel lblSalir1;
 
 
 	public MainFrame() throws HeadlessException {
@@ -254,9 +254,9 @@ public class MainFrame extends JFrame implements ChangeListener {
 			}
 		});
 
-		lblSalir_1 = new JLabel("Salir");
-		lblSalir_1.setBounds(825, 502, 46, 14);
-		getContentPane().add(lblSalir_1);
+		lblSalir1 = new JLabel("Salir");
+		lblSalir1.setBounds(825, 502, 46, 14);
+		getContentPane().add(lblSalir1);
 		
 		lblImgSalir = new JLabel();
 		lblImgSalir.setBounds(798, 433, 60, 60);
