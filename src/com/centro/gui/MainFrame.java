@@ -65,7 +65,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		this.setResizable(false);
-		ImageIcon icono = new ImageIcon(getClass().getResource("../img/icono.png")); 
+		ImageIcon icono = new ImageIcon(getClass().getResource("/com/centro/img/icono.png")); 
 		this.setIconImage(icono.getImage());
 
 		JLabel lbl_tolerancia = new JLabel("Tolerancia:");
@@ -152,7 +152,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		lblImgencargarImagen = new JLabel("");
 		lblImgencargarImagen.setBounds(679, 437, 60, 60);
 		getContentPane().add(lblImgencargarImagen);
-		ImageIcon icon2 = new ImageIcon(this.getClass().getResource("../img/cargar.png"));
+		ImageIcon icon2 = new ImageIcon(this.getClass().getResource("/com/centro/img/cargar.png"));
 		lblImgencargarImagen.setIcon(icon2);
 		lblImgencargarImagen.addMouseListener(new MouseListener() {
 
@@ -214,7 +214,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		lblImgAcerca = new JLabel();
 		lblImgAcerca.setBounds(567, 432, 60, 60);
 		getContentPane().add(lblImgAcerca);
-		ImageIcon icon1 = new ImageIcon(this.getClass().getResource("../img/acercade.png"));
+		ImageIcon icon1 = new ImageIcon(this.getClass().getResource("/com/centro/img/acercade.png"));
 		lblImgAcerca.setIcon(icon1);
 		lblImgAcerca.addMouseListener(new MouseListener() {
 
@@ -253,7 +253,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		lblImgGenerar = new JLabel();
 		lblImgGenerar.setBounds(811, 27, 60, 60);
 		getContentPane().add(lblImgGenerar);
-		ImageIcon icon3 = new ImageIcon(this.getClass().getResource("../img/ejecutar.png"));
+		ImageIcon icon3 = new ImageIcon(this.getClass().getResource("/com/centro/img/ejecutar.png"));
 		lblImgGenerar.setIcon(icon3);
 		lblImgGenerar.addMouseListener(new MouseListener() {
 			
@@ -297,7 +297,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		lblImgSalir = new JLabel();
 		lblImgSalir.setBounds(798, 433, 60, 60);
 		getContentPane().add(lblImgSalir);
-		ImageIcon icon4 = new ImageIcon(this.getClass().getResource("../img/salir.png"));
+		ImageIcon icon4 = new ImageIcon(this.getClass().getResource("/com/centro/img/salir.png"));
 		lblImgSalir.setIcon(icon4);
 		lblImgSalir.addMouseListener(new MouseListener() {
 
